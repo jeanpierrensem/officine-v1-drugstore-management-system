@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="1014.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.losto.controllers.HomeController">
+   <children>
+      <BorderPane prefHeight="569.0" prefWidth="1014.0">
+         <left>
+            <VBox prefHeight="518.0" prefWidth="161.0" style="-fx-background-color: #6F5CC2;" BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <Button alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="161.0" styleClass="btnMenu" text="Profile" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../icons/5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Avenir Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="161.0" styleClass="btnMenu" text="Users" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../icons/project3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Avenir Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="161.0" styleClass="btnMenu" text="Projects" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../icons/14.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Avenir Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="161.0" styleClass="btnMenu" text="Tasks" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../icons/task.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Avenir Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="161.0" styleClass="btnMenu" text="Reports" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../icons/12.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Avenir Black" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnExit" alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="161.0" styleClass="btnMenu" text="Quit" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../icons/delete.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Avenir Black" size="12.0" />
+                     </font>
+                  </Button>
+               </children></VBox>
+         </left>
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="752.0" spacing="30.0" style="-fx-background-color: #52438F;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="54.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../icons/logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="25.0" prefWidth="134.0" text="DevSoft" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS" underline="true">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <BorderPane prefHeight="511.0" prefWidth="869.0" BorderPane.alignment="CENTER">
+               <top>
+                  <TabPane prefHeight="508.0" prefWidth="695.0" stylesheets="@../css/style.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                      <Tab text="Members">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="436.0" prefWidth="695.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="752.0" spacing="10.0" style="-fx-background-color: #EBEBEB;">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="59.0" text="Members" textFill="#52438f">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Button mnemonicParsing="false" text="Add New" textFill="#6b6666">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                          <Button mnemonicParsing="false" text="Import user" textFill="#6b6666">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                          <Button mnemonicParsing="false" text="Export User" textFill="#6b6666">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <TableView fx:id="tv" layoutY="76.0" prefHeight="381.0" prefWidth="854.0" stylesheets="@../css/style.css">
+                                      <columns>
+                                        <TableColumn fx:id="tcName" prefWidth="75.0" text="Name" />
+                                        <TableColumn fx:id="tcMobile" prefWidth="75.0" text="Mobile" />
+                                          <TableColumn fx:id="tcEmail" prefWidth="75.0" text="Email" />
+                                          <TableColumn fx:id="tcAction" prefWidth="75.0" text="Action" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Admins">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="752.0" spacing="10.0" style="-fx-background-color: #ECECEC;">
+                                       <children>
+                                          <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                             <image>
+                                                <Image url="@../icons/img.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Label prefHeight="17.0" prefWidth="59.0" text="Admins" textFill="#111010">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Button mnemonicParsing="false" text="Button" textFill="#6b6666">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                          <Button mnemonicParsing="false" text="Button" textFill="#6b6666">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                          <Button mnemonicParsing="false" text="Button" textFill="#6b6666">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </top>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
