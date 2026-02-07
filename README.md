@@ -1,4 +1,9 @@
 # OFFICINE-DRUGSTORE MANAGEMENT-
+
 <h4> DRUGSTORE MANAGEMENT SYSTEM </h4> 
 <hr/>
 <img src="captures/1.png" />
+<hr/>
+<img src="captures/2.png" />
+<hr/>
+<img src="captures/3.png" />

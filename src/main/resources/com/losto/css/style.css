@@ -2,20 +2,21 @@
 .root {
     -fx-font-family: "Segoe UI", Arial, sans-serif;
     -fx-font-size: 14px;
-    -fx-background-color: #ECECEC;
+    -fx-background-color: #faf8f8;
 }
 
 
-/* Buttons styling */
+/* Menu button styling */
 .btnMenu {
     -fx-background-color: #6F5CC2;
-    -fx-background-radius: 0em;
-    /*-fx-text-fill: white;
+    -fx-background-radius: 5em;
+    -fx-text-fill: white;
     -fx-padding: 8px 15px;
-    -fx-font-weight: bold;*/
+    -fx-font-weight: bold;
 }
 
-.btnMenu:hover {
+
+ .btnMenu:hover {
     -fx-background-color: #A89DDA
 }
 
@@ -26,65 +27,42 @@
     -fx-background-color: #7D6CCB;
     -fx-border-color: #7D6CCB;
     -fx-border-width: 3px 3px 3px 3px ;
+
 }
 
-.button2{
-
+.primary-button{
     -fx-background-color: #ffffff;
-    -fx-text-fill: black;
-    -fx-background-radius: 0em;
+    -fx-text-fill: #4f33de;
+    -fx-font-size: 12px;
+    -fx-border-width: 3px 3px 3px 3px ;
+    -fx-background-radius: 5em;
+    -fx-padding: 10;
+}
+.primary-button:hover {
+    -fx-background-color: #4f33de;
+    -fx-text-fill: #ffffff ;
+    -fx-font-weight: bold;
+
 
 }
+/*.HBox .button{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #4f33de;
+    -fx-font-size: 12px;
+    -fx-border-width: 3px 3px 3px 3px ;
+    -fx-background-radius: 10em;
+}*/
 
 
  /*Text fields*/
 .text-field {
     -fx-background-color: white;
     -fx-border-color: #CCCCCC;
-    -fx-border-radius: 3;
+    -fx-border-radius: 5;
+    -fx-font-size: 12px;
     -fx-padding: 5px;
 }
 
-
-
-/* Buttons styling */
-.btnMenu {
-    -fx-background-color: #6F5CC2;
-    -fx-background-radius: 0em;
-    /*-fx-text-fill: white;
-    -fx-padding: 8px 15px;
-    -fx-font-weight: bold;*/
-}
-
-.btnMenu:hover {
-    -fx-background-color: #A89DDA
-}
-
-.btnMenu:pressed {
-    -fx-background-color: #004780;
-}
-.btnMenu:focused{
-    -fx-background-color: #7D6CCB;
-    -fx-border-color: #7D6CCB;
-    -fx-border-width: 0px 0px 0px 3px ;
-}
-
-.button2{
-
-    -fx-background-color: #ffffff;
-    -fx-text-fill: black;
-    -fx-background-radius: 0em;
-
-}
-
-
-/* Text fields
-.text-field {
-    -fx-background-color: white;
-    -fx-border-color: #CCCCCC;
-    -fx-border-radius: 3;
-    -fx-padding: 5px;
-}*/
 
 /* TableView*/
 .table-view {
@@ -130,15 +108,9 @@
 }
 
 
-
-
-
-
 .tab-pane .tab-header-area .tab-header-background {
     -fx-opacity: 0;
 }
-
-
 
 .tab-pane{
     -fx-tab-min-width: 90px;

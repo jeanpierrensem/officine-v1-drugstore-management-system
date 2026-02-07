@@ -1,67 +1,65 @@
 package com.losto.controllers;
 
-import com.losto.backend.entities.*;
-import javafx.collections.*;
+
+import com.losto.params.constants.*;
+import javafx.event.*;
 import javafx.fxml.*;
+import javafx.scene.*;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.*;
+import javafx.scene.layout.*;
 
-import java.net.*;
-import java.util.*;
+import java.io.*;
 
-public class HomeController implements Initializable {
+
+public class HomeController  {
     @FXML
-    private Button btnExit ;
-    @FXML
-    private TableView tv;
-    private  ObservableList<Member> data;
+    BorderPane rootPane ;
 
     @FXML
-    private TableColumn<Member, String> tcName;
+    Button btnSec, btnRef, btnApp, btnStock, btnStat, btnIaAna, btnExit;
+
     @FXML
-    private TableColumn<Member, String> tcEmail;
-    @FXML
-    private TableColumn<Member, String> tcMobile;
-    @FXML
-    private TableColumn<Member, String> tcAction;
+    public void handleOnClick ( ActionEvent evt ){
+        if (evt.getSource()==btnSec) {
+            loadView("securite.fxml");
+            return;
+        }
+        if (evt.getSource()==btnRef) {
+            loadView("referentiel.fxml");
+            return;
+        }
 
+        if (evt.getSource()==btnApp) {
+            loadView("appro.fxml");
+            return;
+        }
 
+        if (evt.getSource()==btnStock) {
+            loadView("stock.fxml");
+            return;
+        }
 
+        if (evt.getSource()==btnStat) {
+            loadView("stat.fxml");
+            return;
+        }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        tcAction.setCellValueFactory(new PropertyValueFactory<>("Action"));
-        tcEmail.setCellValueFactory(new PropertyValueFactory<>("Email"));
-        tcMobile.setCellValueFactory(new PropertyValueFactory<>("Mobile"));
-        tcName.setCellValueFactory(new PropertyValueFactory<>("Name"));
-      data = FXCollections.observableArrayList(
-              new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
-              new Member("member 2", "09785634","member2@gmail.com",  "Call"),
-              new Member("member 3", "09785634","member3@gmail.com",  "Call"),
-              new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
-              new Member("member 2", "09785634","member2@gmail.com",  "Call"),
-              new Member("member 3", "09785634","member3@gmail.com",  "Call"),
-              new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
-              new Member("member 2", "09785634","member2@gmail.com",  "Call"),
-              new Member("member 3", "09785634","member3@gmail.com",  "Call"),
-              new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
-              new Member("member 2", "09785634","member2@gmail.com",  "Call"),
-              new Member("member 3", "09785634","member3@gmail.com",  "Call"),
-              new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
-              new Member("member 2", "09785634","member2@gmail.com",  "Call"),
-              new Member("member 3", "09785634","member3@gmail.com",  "Call"),
-              new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
-              new Member("member 2", "09785634","member2@gmail.com",  "Call"),
-              new Member("member 3", "09785634","member3@gmail.com",  "Call"),
-              new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
-              new Member("member 2", "09785634","member2@gmail.com",  "Call"),
-              new Member("member 3", "09785634","member3@gmail.com",  "Call"),
-              new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
-              new Member("member 2", "09785634","member2@gmail.com",  "Call"),
-              new Member("member 3", "09785634","member3@gmail.com",  "Call")
-      );
+        if (evt.getSource()==btnIaAna) {
+            loadView("iaana.fxml");
+            return;
+        }
+        if (evt.getSource()==btnExit) {
+            javafx.application.Platform.exit();
 
-      tv.setItems(data);
-
+        }
+    }
+    private void loadView(String fxml) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource( Params.basePath +  fxml));
+            Node view = loader.load();
+            rootPane.setCenter(view);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
