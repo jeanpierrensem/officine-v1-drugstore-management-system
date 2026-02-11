@@ -44,7 +44,16 @@ public class ProfilesController implements Initializable {
                 new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
                 new Member("member 2", "09785634","member2@gmail.com",  "Call"),
                 new Member("member 3", "09785634","member3@gmail.com",  "Call"),
+                new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
+                new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
+                new Member("member 2", "09785634","member2@gmail.com",  "Call"),
+                new Member("member 3", "09785634","member3@gmail.com",  "Call"),
+                new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
+                new Member("member 2", "09785634","member2@gmail.com",  "Call"),
+                new Member("member 3", "09785634","member3@gmail.com",  "Call"),
+                new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
                 new Member("member 1", "09785634", "member1@gmail.com",  "Call")
+
         );
         List<Member> memberSortedList = new SortedList<>(data);
         ((SortedList)memberSortedList).setComparator((m1,m2)->{

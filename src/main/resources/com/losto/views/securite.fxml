@@ -22,9 +22,9 @@
                <tabs>
                   <Tab text="Groupes">
                      <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="436.0" prefWidth="695.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="467.0" prefWidth="837.0">
                            <children>
-                              <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="859.0" spacing="10.0" style="-fx-background-color: #EBEBEB;">
+                              <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="859.0" spacing="10.0" style="-fx-background-color: #EBEBEB;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                  <children>
                                     <Label prefHeight="17.0" prefWidth="59.0" text="Groupes" textFill="#52438f">
                                        <opaqueInsets>
@@ -51,12 +51,12 @@
                                     </Button>
                                  </children>
                               </HBox>
-                              <TableView fx:id="tv" layoutY="76.0" prefHeight="381.0" prefWidth="854.0" stylesheets="@../css/style.css">
+                              <TableView fx:id="tv" layoutY="50.0" prefHeight="407.0" prefWidth="853.0" stylesheets="@../css/style.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
                                  <columns>
                                     <TableColumn fx:id="tcName" prefWidth="75.0" text="Name" />
                                     <TableColumn fx:id="tcMobile" prefWidth="75.0" text="Mobile" />
                                     <TableColumn fx:id="tcEmail" prefWidth="75.0" text="Email" />
-                                    <TableColumn fx:id="tcAction" prefWidth="75.0" text="Action" />
+                                    <TableColumn fx:id="tcAction" prefWidth="50.0" text="Action" />
                                  </columns>
                                  <columnResizePolicy>
                                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -140,7 +140,7 @@
                                     </Button>
                                  </children>
                               </HBox>
-                              <TableView fx:id="tv1" layoutY="76.0" prefHeight="381.0" prefWidth="854.0" stylesheets="@../css/style.css">
+                              <TableView fx:id="tv1" layoutY="49.0" prefHeight="408.0" prefWidth="854.0" stylesheets="@../css/style.css">
                                  <columns>
                                     <TableColumn fx:id="tcName1" prefWidth="75.0" text="Name" />
                                     <TableColumn fx:id="tcMobile1" prefWidth="75.0" text="Mobile" />

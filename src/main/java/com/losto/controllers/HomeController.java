@@ -16,10 +16,11 @@ public class HomeController  {
     BorderPane rootPane ;
 
     @FXML
-    Button btnSec, btnRef, btnApp, btnStock, btnStat, btnIaAna, btnExit;
+    Button btnSec, btnRef, btnApp, btnStock, btnStat, btnIaAna, btnExit, btnConnecter;
 
     @FXML
     public void handleOnClick ( ActionEvent evt ){
+        System.out.println("Dans securité");
         if (evt.getSource()==btnSec) {
             loadView("securite.fxml");
             return;
@@ -51,6 +52,9 @@ public class HomeController  {
         if (evt.getSource()==btnExit) {
             javafx.application.Platform.exit();
 
+        }
+        if (evt.getSource()==btnConnecter) {
+            rootPane.setCenter(null);
         }
     }
     private void loadView(String fxml) {

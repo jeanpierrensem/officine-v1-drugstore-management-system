@@ -2,22 +2,29 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="1014.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.losto.controllers.HomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="1057.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.losto.controllers.HomeController">
    <children>
-      <BorderPane fx:id="rootPane" prefHeight="569.0" prefWidth="1014.0">
+      <BorderPane fx:id="rootPane" prefHeight="586.0" prefWidth="1060.0">
          <left>
-            <VBox prefHeight="511.0" prefWidth="184.0" style="-fx-background-color: #6F5CC2;" BorderPane.alignment="TOP_LEFT">
+            <VBox prefHeight="568.0" prefWidth="180.0" styleClass="vbox-container" stylesheets="@../css/style.css" BorderPane.alignment="TOP_LEFT">
                <children>
-                  <Button fx:id="btnSec" alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="44.0" prefWidth="197.0" styleClass="btnMenu" text="Sécurité" textFill="WHITE">
+                  <Button fx:id="btnSec" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="46.0" prefWidth="180.0" styleClass="btnMenu" text="Sécurité" textFill="WHITE" textOverrun="CLIP">
                      <graphic>
                         <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
                            <image>
@@ -29,11 +36,11 @@
                         <Font name="Avenir Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnRef" alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="44.0" prefWidth="185.0" styleClass="btnMenu" text="Référentiel" textFill="WHITE">
+                  <Button fx:id="btnRef" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="44.0" prefWidth="210.0" styleClass="btnMenu" text="Référentiel" textFill="WHITE" textOverrun="CLIP">
                      <graphic>
                         <ImageView fitHeight="18.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" smooth="false">
                            <image>
-                              <Image url="@../icons/project3.png" />
+                              <Image url="@../icons/1.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -41,7 +48,7 @@
                         <Font name="Avenir Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnApp" alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="44.0" prefWidth="184.0" styleClass="btnMenu" text="Approvisionnement" textFill="WHITE">
+                  <Button fx:id="btnApp" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="44.0" prefWidth="226.0" styleClass="btnMenu" text="Approvisionnement" textFill="WHITE" textOverrun="CLIP">
                      <graphic>
                         <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
                            <image>
@@ -53,7 +60,7 @@
                         <Font name="Avenir Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnStock" alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="44.0" prefWidth="189.0" styleClass="btnMenu" text="Stock" textFill="WHITE">
+                  <Button fx:id="btnStock" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="44.0" prefWidth="294.0" styleClass="btnMenu" text="Stock" textFill="WHITE">
                      <graphic>
                         <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
                            <image>
@@ -65,7 +72,7 @@
                         <Font name="Avenir Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnStat" alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="44.0" prefWidth="184.0" styleClass="btnMenu" text="Statistiques" textFill="WHITE">
+                  <Button fx:id="btnStat" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="44.0" prefWidth="258.0" styleClass="btnMenu" text="Statistiques" textFill="WHITE">
                      <graphic>
                         <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
                            <image>
@@ -77,7 +84,7 @@
                         <Font name="Avenir Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnIaAna" alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="44.0" prefWidth="188.0" styleClass="btnMenu" text="IA &amp; Analytique" textFill="WHITE">
+                  <Button fx:id="btnIaAna" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="61.0" prefWidth="180.0" styleClass="btnMenu" text="IA &amp; Analytique" textFill="WHITE">
                      <graphic>
                         <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
                            <image>
@@ -89,45 +96,88 @@
                         <Font name="Avenir Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnExit" alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="44.0" prefWidth="189.0" styleClass="btnMenu" text="Quit" textFill="WHITE">
-                     <graphic>
-                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
-                           <image>
-                              <Image url="@../icons/delete.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="Avenir Black" size="12.0" />
-                     </font>
-                  </Button>
-               </children></VBox>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets top="10.0" />
+               </padding></VBox>
          </left>
          <top>
             <HBox fx:id="topHB" alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="957.0" spacing="30.0" style="-fx-background-color: #52438F;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="54.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true" smooth="false">
-                     <image>
-                        <Image url="@../icons/logo.png" />
-                     </image>
-                     <HBox.margin>
-                        <Insets left="30.0" />
-                     </HBox.margin>
-                  </ImageView>
-                  <Label prefHeight="25.0" prefWidth="134.0" text="DevSoft" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS" underline="true">
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <ImageView fitHeight="37.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" smooth="false" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../icons/logo.png" />
+                           </image>
+                           <BorderPane.margin>
+                              <Insets bottom="20.0" />
+                           </BorderPane.margin>
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </ImageView>
+                     </center>
+                     <right>
+                        <Label alignment="BOTTOM_CENTER" prefHeight="50.0" prefWidth="932.0" styleClass="label-title" stylesheets="@../css/style.css" text="lOstO" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Al Bayan Bold" size="24.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </Label>
+                     </right>
+                  </BorderPane>
+                  <Button fx:id="btnExit" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="44.0" prefWidth="95.0" styleClass="btnMenu" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../icons/quit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                      <font>
-                        <Font name="System Bold" size="24.0" />
+                        <Font name="Avenir Black" size="12.0" />
                      </font>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <HBox.margin>
-                        <Insets left="5.0" />
-                     </HBox.margin>
-                  </Label>
+                  </Button>
                </children>
             </HBox>
          </top>
+         <center>
+            <AnchorPane fx:id="idadduser" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="537.0" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="-3.0" prefHeight="56.0" prefWidth="548.0" style="-fx-background-color: #4F4990;">
+                     <children>
+                        <Label layoutX="200.0" layoutY="14.0" styleClass="label-title" stylesheets="@../css/style.css" text="Authentification" textFill="#f5f0f0" />
+                     </children>
+                  </Pane>
+                  <TextField layoutX="147.0" layoutY="90.0" prefHeight="30.0" prefWidth="243.0" promptText="User name" stylesheets="@../css/style.css">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btnConnecter" layoutX="147.0" layoutY="242.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="36.0" prefWidth="106.0" styleClass="primary-button" stylesheets="@../css/style.css" text="Se Connecter" />
+                  <CheckBox layoutX="262.0" layoutY="211.0" mnemonicParsing="false" text="Se Souvenir de moi" textFill="#3715d0" />
+                  <PasswordField layoutX="147.0" layoutY="175.0" prefHeight="30.0" prefWidth="243.0" promptText="password" stylesheets="@../css/style.css" />
+                  <Label layoutX="147.0" layoutY="66.0" prefHeight="18.0" prefWidth="126.0" text="Username" textFill="#7c7676" />
+                  <Label layoutX="147.0" layoutY="149.0" prefHeight="18.0" prefWidth="126.0" text="Mot de Passe" />
+                  <Hyperlink layoutX="273.0" layoutY="248.0" prefHeight="25.0" prefWidth="145.0" text="mot de passe oublié ? " />
+               </children>
+            </AnchorPane>
+         </center>
       </BorderPane>
    </children>
 </AnchorPane>
