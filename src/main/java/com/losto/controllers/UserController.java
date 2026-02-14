@@ -17,14 +17,15 @@ public class UserController {
     public void handleOnClick(ActionEvent evt){
         if (evt.getSource()==btnAdd) {
             System.out.println("Ajouter un user");
-            return ;
+
+        }  else {
+            //case return
+            Stage stage = (Stage) ((Node) evt.getSource()).getScene().getWindow();
+            stage.close();
         }
 
-        //case return
-        Stage stage = (Stage) ((Node) evt.getSource())
-                    .getScene()
-                    .getWindow();
-            stage.close();
+
+
 
     }
 

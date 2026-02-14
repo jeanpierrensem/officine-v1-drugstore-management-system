@@ -1,32 +1,85 @@
 /* Root background and default fonts */
 .root {
-    -fx-font-family: "Segoe UI", Arial, sans-serif;
-    -fx-font-size: 14px;
+    -fx-font-size: 12px;
     -fx-background-color: #faf8f8;
 }
+
+.search-field {
+    -fx-background-radius: 6;
+    -fx-background-color: white;
+    -fx-padding: 3;
+}
+
+.search-field .text-field {
+    -fx-background-color:  #f1f3f4;;
+    -fx-border-color: transparent;
+    -fx-background-radius: 20;
+    -fx-border-width: 0;
+    -fx-padding: 8 15 8 35;
+    -fx-prompt-text-fill: "search...";
+    -fx-font-size: 10px;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10 14;
+    -fx-text-fill: #2f4f4f;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0.2, 0, 2);
+}
+
+
+.text-field:focused {
+    -fx-border-color: #2962ff;
+    -fx-border-width: 2;
+    -fx-background-color: white;
+}
+
+
+/* forms */
+.form_header , .form_pane{
+    -fx-background-radius: 5em;
+    -fx-background-color: linear-gradient(to left, #42A3D0, #010948 );
+}
+/*.form_pane{
+    -fx-background-radius: 5em;
+    -fx-background-color: linear-gradient(to top, #42A3D0, #010948 );
+}*/
+
 .label {
     -fx-font-family: "Segoe UI", "Roboto", "Arial";
-    -fx-font-size: 14px;
-    -fx-text-fill: #4f33de;;
-
+    -fx-font-size: 11px;
+    -fx-text-fill: black ;
     -fx-padding: 4 8 4 8;
 }
-.label-title {
-    -fx-font-size: 20px;
+.labelAppName {
+    -fx-text-fill: white;
+    -fx-font-size: 20;
     -fx-font-weight: bold;
+}
+
+.label-title {
+    -fx-font-family: "Roboto Light", "Segoe UI",  sans-serif;
+    -fx-font-size: 12px;
+    -fx-background-color: transparent;
     -fx-text-fill: #FFFFFF;
 }
 
 /* Menu button styling  #6F5CC2, #4B3FA6 */
 .btnMenu {
-   -fx-background-color: transparent;
+    -fx-font-family: "Roboto Light", "Segoe UI",  sans-serif;
+    -fx-font-size: 12px;
+    -fx-background-color: transparent;
     -fx-text-fill: white;
     -fx-padding: 8px 15px;
-    -fx-font-weight: bold;
-    -fx-opacity: 0.8;
+    -fx-opacity: 1;
      transition-property: -fx-opacity;
      transition-duration: 0.5s;
 }
+
+
 
 /* Flat button */
 .button.flat {
@@ -35,76 +88,80 @@
 }
 
 .vbox-container{
-/*-fx-background-color: linear-gradient(to bottom right, #6F5CC2, #ffffff );*/
-    -fx-background-color: radial-gradient(
-            center 50% 50%,
-            radius 100%,
-            #6F5CC2,
-            #ffffff);
+    -fx-background-color: linear-gradient(to bottom, #42A3D0, #010948 );
 }
 
 .btnMenu:hover {
--fx-background-color: #A89DDA;
+-fx-background-color: #BEC2DF ; /*#A89DDA;*/
  -fx-opacity: 1;
 }
 
 .btnMenu:pressed {
--fx-background-color: #4f33de;
-
+-fx-background-color: #42A3D0 ;
 }
-.btnMenu:focused{
--fx-background-color: #7D6CCB;
--fx-border-color: #7D6CCB;
--fx-border-width: 3px 3px 3px 3px ;
 
+.btnMenu:focused{
+-fx-background-color: #42A3D0;
+-fx-border-color: #42A3D0;
+-fx-border-width: 3px 3px 3px 3px ;
 }
 
 .primary-button{
--fx-background-color: #ffffff;
--fx-text-fill: #4f33de;
--fx-font-size: 12px;
--fx-border-width: 3px 3px 3px 3px ;
--fx-background-radius: 5em;
--fx-padding: 10;
--fx-opacity: 0.8;
-transition-property: -fx-opacity;
-transition-duration: 0.5s;
+    -fx-background-color: #FFFF;
+    -fx-text-fill: #14346B;
+    -fx-font-size: 11px;
+    -fx-border-width: 3px 3px 3px 3px ;
+    -fx-background-radius: 5em;
+    -fx-padding: 5;
+    -fx-opacity: 0.8;
+    transition-property: -fx-opacity;
+    transition-duration: 0.5s;
 }
+
 .primary-button:hover {
--fx-background-color: #4f33de;
--fx-text-fill: #ffffff ;
--fx-font-weight: bold;
--fx-opacity: 1;
+    -fx-background-color: #14346B; ;
+    -fx-text-fill: #ffffff ;
+    -fx-font-weight: bold;
+    -fx-opacity: 1;
 }
+
 /*Text fields*/
 .text-field .password-field{
     -fx-background-color: white;
     -fx-border-color: #CCCCCC;
     -fx-border-radius: 5;
-    -fx-font-size: 12px;
+    -fx-font-size: 10px;
     -fx-padding: 5px;
     -fx-text-alignment: left;
 }
 
 /* TableView*/
 .table-view {
-    /*-fx-border-color: transparent;
-    -fx-background-color: #FFFFFF;*/
     -fx-background-color: transparent;
     -fx-border-color: #E0E0E0;
     -fx-border-radius: 6;
     -fx-background-radius: 6;
     -fx-table-cell-border-color: transparent;
-    -fx-padding: 5;
+    -fx-font-size: 10px;
+    -fx-font-family: "Roboto Light", "Segoe UI",  sans-serif;
+    -fx-text-fill: #BABABA;
+    /*-fx-cell-size: 10px;*/
+    /*-fx-padding: 1;*/
+    -fx-fixed-cell-size: 25;
 
+}
+
+/*form containner*/
+.form_container{
+    -fx-background-color: linear-gradient(to bottom, #42A3D0, #ffffff );
 }
 
 /* ===== HEADER ===== */
 .table-view .column-header-background {
-    -fx-background-color: linear-gradient(to top, #6F5CC2, #EFEFEF);
+    -fx-background-color: linear-gradient(to bottom, #42A3D0, #010948 );
     -fx-background-radius: 6 6 0 0;
-
 }
+
 .table-view .column-header,
 .table-view .filler {
     -fx-background-color: transparent;
@@ -120,9 +177,12 @@ transition-duration: 0.5s;
 .table-view .filler {
     -fx-background-color: transparent;
 }
+.table-view :selected {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
 
-
-/* ===== ROWS ===== */
+    /* ===== ROWS ===== */
 .table-row-cell {
     -fx-background-color: white;
 }
@@ -138,13 +198,14 @@ transition-duration: 0.5s;
 
 /* Selected */
 .table-row-cell:selected {
-    -fx-background-color: #DAD6F5;
-    -fx-text-fill: black;
+    -fx-background-color: #4F92BF ;
+    -fx-text-fill: white;
+
 }
 
 /* ===== CELLS ===== */
 .table-cell {
-    -fx-padding: 8 10;
+    /*-fx-padding: 8 10;*/
     -fx-border-color: transparent transparent #EEEEEE transparent;
     -fx-alignment: CENTER_LEFT;
 }
@@ -184,10 +245,14 @@ transition-duration: 0.5s;
 }
 
 .tab-pane .tab:selected{
-    -fx-background-color: #FFFFFF;
-    -fx-text-fill: #6F5CC2;
-    -fx-border-color: #6F5CC2;
-    -fx-border-width: 0px 0px 3px 0px;
+    /*-fx-background-color: #FFFFFF;*/
+    -fx-background-color: linear-gradient(to bottom, #42A3D0, #010948 );
+    -fx-text-fill: #FFFFFF;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+
+    /*-fx-border-color: #6F5CC2;*/
+   /* -fx-border-width: 0px 0px 3px 0px;*/
 }
 
 .tab .tab-label{

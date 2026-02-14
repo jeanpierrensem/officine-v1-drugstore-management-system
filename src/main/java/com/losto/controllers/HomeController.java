@@ -20,33 +20,32 @@ public class HomeController  {
 
     @FXML
     public void handleOnClick ( ActionEvent evt ){
-        System.out.println("Dans securité");
         if (evt.getSource()==btnSec) {
-            loadView("securite.fxml");
+            loadView("securites/home.fxml");
             return;
         }
         if (evt.getSource()==btnRef) {
-            loadView("referentiel.fxml");
+            loadView("referentiel/home.fxml");
             return;
         }
 
         if (evt.getSource()==btnApp) {
-            loadView("appro.fxml");
+            loadView("approvisionnement/home.fxml");
             return;
         }
 
         if (evt.getSource()==btnStock) {
-            loadView("stock.fxml");
+            loadView("stock/home.fxml");
             return;
         }
 
         if (evt.getSource()==btnStat) {
-            loadView("stat.fxml");
+            loadView("statistiques/home.fxml");
             return;
         }
 
         if (evt.getSource()==btnIaAna) {
-            loadView("iaana.fxml");
+            loadView("iaanalytique/home.fxml");
             return;
         }
         if (evt.getSource()==btnExit) {

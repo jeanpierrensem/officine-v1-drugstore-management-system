@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="idadduser" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.losto.controllers.UserController">
+   <children>
+      <Pane layoutX="-3.0" prefHeight="56.0" prefWidth="606.0" style="-fx-background-color: #4F4990;">
+         <children>
+            <Label layoutX="252.0" layoutY="20.0" text="Création utilisateur" textFill="#f5f0f0" />
+         </children></Pane>
+      <TextField alignment="CENTER" layoutX="99.0" layoutY="62.0" prefHeight="30.0" prefWidth="176.0" promptText="User name" stylesheets="@../../css/style.css">
+         <font>
+            <Font size="12.0" />
+         </font></TextField>
+      <TextField alignment="CENTER" layoutX="100.0" layoutY="103.0" prefHeight="30.0" prefWidth="429.0" promptText="phone" stylesheets="@../../css/style.css" />
+      <TextField alignment="CENTER" layoutX="99.0" layoutY="185.0" prefHeight="30.0" prefWidth="429.0" promptText="Email" stylesheets="@../../css/style.css" />
+      <TextField alignment="CENTER" layoutX="100.0" layoutY="144.0" prefHeight="30.0" prefWidth="212.0" promptText="Action " stylesheets="@../../css/style.css" />
+      <Button fx:id="btnAdd" layoutX="99.0" layoutY="296.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="121.0" styleClass="primary-button" stylesheets="@../../css/style.css" text="Enregistrer" />
+      <Button fx:id="btnReturn" layoutX="372.0" layoutY="296.0" mnemonicParsing="false" onAction="#handleOnClick" prefHeight="36.0" prefWidth="130.0" styleClass="primary-button" stylesheets="@../../css/style.css" text="Annuler" />
+      <TextField alignment="CENTER" layoutX="284.0" layoutY="62.0" prefHeight="30.0" prefWidth="243.0" promptText="User name" stylesheets="@../../css/style.css">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" layoutX="326.0" layoutY="144.0" prefHeight="30.0" prefWidth="203.0" promptText="phone" stylesheets="@../../css/style.css" />
+      <TextField alignment="CENTER" layoutX="100.0" layoutY="223.0" prefHeight="30.0" prefWidth="429.0" promptText="Email" stylesheets="@../../css/style.css" />
+      <DatePicker layoutX="100.0" layoutY="260.0" />
+      <CheckBox layoutX="300.0" layoutY="264.0" mnemonicParsing="false" text="CheckBox" />
+      <ChoiceBox layoutX="395.0" layoutY="260.0" prefWidth="150.0" />
+      <ProgressBar layoutX="94.0" layoutY="342.0" prefWidth="200.0" progress="0.0" />
+   </children>
+</AnchorPane>

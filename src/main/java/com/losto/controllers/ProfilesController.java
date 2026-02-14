@@ -16,16 +16,16 @@ import java.util.*;
 public class ProfilesController implements Initializable {
     @FXML
     private TableView tv;
-    private ObservableList<Member> data;
+    private ObservableList<Fournisseur> data;
 
     @FXML
-    private TableColumn<Member, String> tcName;
+    private TableColumn<Fournisseur, String> tcName;
     @FXML
-    private TableColumn<Member, String> tcEmail;
+    private TableColumn<Fournisseur, String> tcEmail;
     @FXML
-    private TableColumn<Member, String> tcMobile;
+    private TableColumn<Fournisseur, String> tcMobile;
     @FXML
-    private TableColumn<Member, String> tcAction;
+    private TableColumn<Fournisseur, String> tcAction;
 
     @FXML
     private  Button btnAdd, btnExport, btnImport, btnProfile;
@@ -38,29 +38,29 @@ public class ProfilesController implements Initializable {
         tcMobile.setCellValueFactory(new PropertyValueFactory<>("Mobile"));
         tcName.setCellValueFactory(new PropertyValueFactory<>("Name"));
         data = FXCollections.observableArrayList(
-                new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
-                new Member("member 2", "09785634","member2@gmail.com",  "Call"),
-                new Member("member 3", "09785634","member3@gmail.com",  "Call"),
-                new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
-                new Member("member 2", "09785634","member2@gmail.com",  "Call"),
-                new Member("member 3", "09785634","member3@gmail.com",  "Call"),
-                new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
-                new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
-                new Member("member 2", "09785634","member2@gmail.com",  "Call"),
-                new Member("member 3", "09785634","member3@gmail.com",  "Call"),
-                new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
-                new Member("member 2", "09785634","member2@gmail.com",  "Call"),
-                new Member("member 3", "09785634","member3@gmail.com",  "Call"),
-                new Member("member 1", "09785634", "member1@gmail.com",  "Call"),
-                new Member("member 1", "09785634", "member1@gmail.com",  "Call")
+                new Fournisseur("member 1", "09785634", "member1@gmail.com",  "Call"),
+                new Fournisseur("member 2", "09785634","member2@gmail.com",  "Call"),
+                new Fournisseur("member 3", "09785634","member3@gmail.com",  "Call"),
+                new Fournisseur("member 1", "09785634", "member1@gmail.com",  "Call"),
+                new Fournisseur("member 2", "09785634","member2@gmail.com",  "Call"),
+                new Fournisseur("member 3", "09785634","member3@gmail.com",  "Call"),
+                new Fournisseur("member 1", "09785634", "member1@gmail.com",  "Call"),
+                new Fournisseur("member 1", "09785634", "member1@gmail.com",  "Call"),
+                new Fournisseur("member 2", "09785634","member2@gmail.com",  "Call"),
+                new Fournisseur("member 3", "09785634","member3@gmail.com",  "Call"),
+                new Fournisseur("member 1", "09785634", "member1@gmail.com",  "Call"),
+                new Fournisseur("member 2", "09785634","member2@gmail.com",  "Call"),
+                new Fournisseur("member 3", "09785634","member3@gmail.com",  "Call"),
+                new Fournisseur("member 1", "09785634", "member1@gmail.com",  "Call"),
+                new Fournisseur("member 1", "09785634", "member1@gmail.com",  "Call")
 
         );
-        List<Member> memberSortedList = new SortedList<>(data);
-        ((SortedList)memberSortedList).setComparator((m1,m2)->{
-            return ((Member)m1).getName().compareToIgnoreCase(((Member)m2).getName());
+        List<Fournisseur> fournisseurSortedList = new SortedList<>(data);
+        ((SortedList) fournisseurSortedList).setComparator((m1, m2)->{
+            return ((Fournisseur)m1).getDesignation().compareToIgnoreCase(((Fournisseur)m2).getDesignation());
         });
 
-        tv.setItems((SortedList)memberSortedList);
+        tv.setItems((SortedList) fournisseurSortedList);
 
     }
 

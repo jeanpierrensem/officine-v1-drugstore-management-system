@@ -3,12 +3,10 @@ package com.losto;
 import com.losto.params.constants.*;
 import javafx.fxml.*;
 import javafx.scene.*;
-import javafx.scene.layout.*;
 import javafx.stage.*;
 
-
-
-import java.io.IOException;
+import java.io.*;
+import java.util.*;
 
 public class Bootstrap extends javafx.application.Application {
 
@@ -34,7 +32,7 @@ public class Bootstrap extends javafx.application.Application {
     @Override
     public void start(Stage stage) throws IOException {
         //FXMLLoader root = new FXMLLoader(Bootstrap.class.getResource (Params.basePath+ "home.fxml"));
-        Parent root = FXMLLoader.load(Bootstrap.class.getResource (Params.basePath+ "home.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Bootstrap.class.getResource(Params.basePath + "home.fxml")));
         Scene scene = new Scene(root);
         stage.initStyle(StageStyle.UNDECORATED);
         enableWindowDrag(root, stage);

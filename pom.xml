@@ -59,6 +59,13 @@
             <artifactId>formsfx-core</artifactId>
             <version>${formsfx.version}</version>
         </dependency>
+        <!-- JFoenix pour searchField-->
+        <dependency>
+            <groupId>com.jfoenix</groupId>
+            <artifactId>jfoenix</artifactId>
+            <version>9.0.10</version>
+        </dependency>
+
         <!--BootstrapFx integration-->
 
         <!-- Source: https://mvnrepository.com/artifact/org.kordamp.bootstrapfx/bootstrapfx-core -->
